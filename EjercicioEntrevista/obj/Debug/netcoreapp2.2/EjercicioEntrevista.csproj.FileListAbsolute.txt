@@ -1,0 +1,14 @@
+C:\Users\krist\source\repos\EjercicioEntrevista\EjercicioEntrevista\bin\Debug\netcoreapp2.2\EjercicioEntrevista.deps.json
+C:\Users\krist\source\repos\EjercicioEntrevista\EjercicioEntrevista\bin\Debug\netcoreapp2.2\EjercicioEntrevista.runtimeconfig.json
+C:\Users\krist\source\repos\EjercicioEntrevista\EjercicioEntrevista\bin\Debug\netcoreapp2.2\EjercicioEntrevista.runtimeconfig.dev.json
+C:\Users\krist\source\repos\EjercicioEntrevista\EjercicioEntrevista\bin\Debug\netcoreapp2.2\EjercicioEntrevista.dll
+C:\Users\krist\source\repos\EjercicioEntrevista\EjercicioEntrevista\bin\Debug\netcoreapp2.2\EjercicioEntrevista.pdb
+C:\Users\krist\source\repos\EjercicioEntrevista\EjercicioEntrevista\obj\Debug\netcoreapp2.2\EjercicioEntrevista.csprojAssemblyReference.cache
+C:\Users\krist\source\repos\EjercicioEntrevista\EjercicioEntrevista\obj\Debug\netcoreapp2.2\EjercicioEntrevista.csproj.CoreCompileInputs.cache
+C:\Users\krist\source\repos\EjercicioEntrevista\EjercicioEntrevista\obj\Debug\netcoreapp2.2\EjercicioEntrevista.RazorAssemblyInfo.cache
+C:\Users\krist\source\repos\EjercicioEntrevista\EjercicioEntrevista\obj\Debug\netcoreapp2.2\EjercicioEntrevista.RazorAssemblyInfo.cs
+C:\Users\krist\source\repos\EjercicioEntrevista\EjercicioEntrevista\obj\Debug\netcoreapp2.2\EjercicioEntrevista.AssemblyInfoInputs.cache
+C:\Users\krist\source\repos\EjercicioEntrevista\EjercicioEntrevista\obj\Debug\netcoreapp2.2\EjercicioEntrevista.AssemblyInfo.cs
+C:\Users\krist\source\repos\EjercicioEntrevista\EjercicioEntrevista\obj\Debug\netcoreapp2.2\EjercicioEntrevista.RazorTargetAssemblyInfo.cache
+C:\Users\krist\source\repos\EjercicioEntrevista\EjercicioEntrevista\obj\Debug\netcoreapp2.2\EjercicioEntrevista.dll
+C:\Users\krist\source\repos\EjercicioEntrevista\EjercicioEntrevista\obj\Debug\netcoreapp2.2\EjercicioEntrevista.pdb
