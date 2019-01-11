@@ -12838,11 +12838,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\krist\\source\\repos\\EjercicioEntrevista\\EjercicioEntrevista\\EjercicioEntrevista.csproj",
+      "projectUniqueName": "C:\\Users\\krist\\Desktop\\Entrevista\\EjercicioEntrevista\\EjercicioEntrevista\\EjercicioEntrevista.csproj",
       "projectName": "EjercicioEntrevista",
-      "projectPath": "C:\\Users\\krist\\source\\repos\\EjercicioEntrevista\\EjercicioEntrevista\\EjercicioEntrevista.csproj",
+      "projectPath": "C:\\Users\\krist\\Desktop\\Entrevista\\EjercicioEntrevista\\EjercicioEntrevista\\EjercicioEntrevista.csproj",
       "packagesPath": "C:\\Users\\krist\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\krist\\source\\repos\\EjercicioEntrevista\\EjercicioEntrevista\\obj\\",
+      "outputPath": "C:\\Users\\krist\\Desktop\\Entrevista\\EjercicioEntrevista\\EjercicioEntrevista\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -33,16 +33,14 @@ namespace EjercicioEntrevista.Controllers
         public IActionResult GetByMoneda(string nombre)
         {
             
-            //context.Cotizaciones.RemoveRange(context.Cotizaciones);
-            //context.SaveChanges();
             //Como estamos trabajando con una tabla generica la misma se refresca cada vez que se compila el codigo.
             if (!context.Cotizaciones.Any())
             {
                 context.Cotizaciones.AddRange(new List<Cotizacion>()
                 {
-                    new Cotizacion(){Moneda = "dolar", Precio = valorDolar()},
-                    new Cotizacion(){Moneda = "euro", Precio = valorEuro()},
-                    new Cotizacion(){Moneda = "real", Precio = valorReal()}
+                    new Cotizacion(){Moneda = "dolar", Precio = calcularCotizacion("dolar")},
+                    new Cotizacion(){Moneda = "euro", Precio = calcularCotizacion("euro")},
+                    new Cotizacion(){Moneda = "real", Precio = calcularCotizacion("real")}
                 });
                 context.SaveChanges();
             }
@@ -69,6 +67,7 @@ namespace EjercicioEntrevista.Controllers
             return Ok(cotizacion);
         }
 
+        //Metodo utilizado para consultar la API del cambio
         public float calcularCotizacion(string moneda)
         {
             string URL = "";
@@ -94,55 +93,5 @@ namespace EjercicioEntrevista.Controllers
             var result = json["result"]["value"].ToObject<float>(); //Obtenemos el valor y lo convertimos de un JToken a un float
             return result;
         }
-
-        //Metodo utilizado para consultar la API del cambio
-        public float valorDolar()
-        {
-            //Asignamos la URL a utilizar
-            const string URL = "https://api.cambio.today/v1/quotes/USD/ARS/json?quantity=1&key=1617|RCv_zF8bHMB5MHLKZEh^8hbMTpqL8M0C";
-
-            //Pasamos la URL al request, luego declaramos los headers y el tipo de petición HTTTP
-            var request = (HttpWebRequest)WebRequest.Create(URL);
-            request.Method = "GET"; 
-            request.UserAgent = "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36";
-            request.AutomaticDecompression = DecompressionMethods.Deflate | DecompressionMethods.GZip;
-
-            var response = (HttpWebResponse)request.GetResponse();
-            var rawJson = new StreamReader(response.GetResponseStream()).ReadToEnd();
-            var json = JObject.Parse(rawJson); //Convertimos la respuesta en un objecto JSON
-            var result = json["result"]["value"].ToObject<float>(); //Obtenemos el valor y lo convertimos de un JToken a un float
-            return result;
-        }
-
-        public float valorEuro()
-        {
-            const string URL = "https://api.cambio.today/v1/quotes/EUR/ARS/json?quantity=1&key=1617|RCv_zF8bHMB5MHLKZEh^8hbMTpqL8M0C";
-            var request = (HttpWebRequest)WebRequest.Create(URL);
-            request.Method = "GET";
-            request.UserAgent = "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36";
-            request.AutomaticDecompression = DecompressionMethods.Deflate | DecompressionMethods.GZip;
-
-            var response = (HttpWebResponse)request.GetResponse();
-            var rawJson = new StreamReader(response.GetResponseStream()).ReadToEnd();
-            var json = JObject.Parse(rawJson);
-            var result = json["result"]["value"].ToObject<float>();
-            return result;
-        }
-
-        public float valorReal()
-        {
-            const string URL = "https://api.cambio.today/v1/quotes/BRL/ARS/json?quantity=1&key=1617|RCv_zF8bHMB5MHLKZEh^8hbMTpqL8M0C";
-            var request = (HttpWebRequest)WebRequest.Create(URL);
-            request.Method = "GET";
-            request.UserAgent = "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36";
-            request.AutomaticDecompression = DecompressionMethods.Deflate | DecompressionMethods.GZip;
-
-            var response = (HttpWebResponse)request.GetResponse();
-            var rawJson = new StreamReader(response.GetResponseStream()).ReadToEnd();
-            var json = JObject.Parse(rawJson);
-            var result = json["result"]["value"].ToObject<float>();
-            return result;
-        }
-        
     }
 }
