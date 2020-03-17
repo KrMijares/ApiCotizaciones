@@ -5,7 +5,6 @@ using System.Net;
 using EjercicioEntrevista.Models;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json.Linq;
-//TEST
 
 namespace EjercicioEntrevista.Controllers
 {
